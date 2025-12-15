@@ -21,10 +21,20 @@ jobs:
         setup-command: ''
         command: make test_shop
         timeout: 10
-        max-score: 100
+        max-score: 50
+    - name: make test_products
+      id: make-test_products
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: make test_products
+        setup-command: ''
+        command: make test_products
+        timeout: 10
+        max-score: 50
     - name: Autograding Reporter
       uses: classroom-resources/autograding-grading-reporter@v1
       env:
         MAKE-TEST_SHOP_RESULTS: "${{steps.make-test_shop.outputs.result}}"
+        MAKE-TEST_PRODUCTS_RESULTS: "${{steps.make-test_products.outputs.result}}"
       with:
-        runners: make-test_shop
+        runners: make-test_shop,make-test_products
