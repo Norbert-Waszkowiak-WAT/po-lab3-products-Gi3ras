@@ -1,9 +1,9 @@
 #ifndef PEN
 #define PEN
-#include "product.cpp"
+#include "paper_product.cpp"
 using namespace std;
  
-class Pen : public Product{
+class Pen : public PaperProduct{
     public:
     string getName() override{
         return "Pen";

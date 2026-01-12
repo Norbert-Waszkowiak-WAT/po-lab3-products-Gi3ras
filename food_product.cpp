@@ -6,9 +6,8 @@
 using namespace std;
 class FoodProduct : public Product{
     public:
-srting getProductType() override {
+string getProductType() override {
     return "FoodProduct";
 }
 };
 #endif
-}
