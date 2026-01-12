@@ -1,9 +1,9 @@
 // test_products.cpp
 #include "catch_amalgamated.hpp"
-#include "bread.h"
-#include "mineral_water.h"
-#include "notebook.h"
-#include "pen.h"
+#include "bread.cpp"
+#include "mineral_water.cpp"
+#include "notebook.cpp"
+#include "pen.cpp"
 
 TEST_CASE("Bread is instance of FoodProduct", "[Bread]") {
     Bread bread;
